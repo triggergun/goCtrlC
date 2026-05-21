@@ -13,7 +13,7 @@ func TestCopy(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	clipboardChan, err := GetClipboardChannel(ctx)
+	clipboardChan, err := GetClipboardChannelByCtrlC(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
